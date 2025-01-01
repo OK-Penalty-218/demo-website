@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A simple and clean links page to access your favorite websites and GitHub projects.">
-  <meta name="author" content="[Your Name]">
-  <title>Simple Links Page</title>
+  <meta name="author" content="[OK-Penalty-218]">
+  <title>OK-Penalty-218</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <style>
     /* General Reset for Consistent Mobile Rendering */
@@ -49,10 +49,35 @@
       margin-bottom: 20px;
       font-size: 1.8rem;
     }
+    .about-me {
+      margin-bottom: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+    }
+    .about-me img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .about-me h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .about-me p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      text-align: center; /* Center paragraph text */
+    }
     .links {
       display: flex;
       flex-direction: column;
-      gap: 20px; /* Increased spacing between buttons */
+      gap: 40px; /* Increased spacing between buttons */
       margin-top: 20px;
     }
     .links a {
@@ -81,7 +106,10 @@
     }
     .projects {
       margin-top: 40px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      text-align: center; /* Center text */
     }
     .projects h2 {
       color: #333;
@@ -93,7 +121,7 @@
       padding: 0;
     }
     .projects ul li {
-      margin-bottom: 20px;
+      margin-bottom: 40px; /* Increased spacing between links */
     }
     .projects ul li a {
       text-decoration: none;
@@ -185,17 +213,30 @@
 <body>
   <!-- Dropdown Menu -->
   <div class="dropdown" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div>about-me</div>
+    <div>links-section</div>
+    <div>projects</div>
   </div>
 
   <div class="container" id="top">
     <div class="logo">
       <img src="images/logo.png" alt="Logo">
     </div>
-    <h1>Welcome to My Developer Page</h1>
+    <h1>Welcome to OK-Penalty-218</h1>
+    
+    <!-- About Me Section -->
+    <div class="about-me" id="about-me">
+      <img src="images/profile.jpg" alt="Profile Picture">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm [Your Name], a passionate developer who loves creating web applications and exploring new technologies. 
+        Check out my favorite links and GitHub projects below!
+      </p>
+    </div>
+
+    <!-- Links Section -->
     <div class="links" id="links-section">
+      <h2>My Links</h2>
       <a href="#links-section">
         <img src="images/google.png" alt="Google"> Google
       </a>
@@ -209,6 +250,8 @@
         <img src="images/example.png" alt="Example"> Example
       </a>
     </div>
+
+    <!-- GitHub Projects Section -->
     <div class="projects" id="github-projects">
       <h2>My GitHub Projects</h2>
       <ul>
@@ -220,18 +263,11 @@
           <a href="https://github.com/yourusername/project2" target="_blank">Project 2: Cool API</a>
           <p>An API that simplifies data handling and provides cool features.</p>
         </li>
-        <li>
-          <a href="https://github.com/yourusername/project3" target="_blank">Project 3: Amazing Library</a>
-          <p>A library that makes complex tasks easier for developers.</p>
-        </li>
-        <li>
-          <a href="https://github.com/yourusername/project4" target="_blank">Project 4: Fun Web App</a>
-          <p>A web app that provides entertainment and productivity tools.</p>
-        </li>
       </ul>
     </div>
+
     <footer>
-      Made with ♥ by [OK-Penalty-218]
+      Made with ♥ by [Chat GPT]
     </footer>
   </div>
 
@@ -240,18 +276,6 @@
     function toggleMenu() {
       document.querySelector('.dropdown').classList.toggle('active');
     }
-
-    // Smooth scroll for links in the dropdown menu
-    const links = document.querySelectorAll('.menu a');
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(e.target.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-        document.querySelector('.dropdown').classList.remove('active');
-      });
-    });
   </script>
 </body>
 </html>
-
