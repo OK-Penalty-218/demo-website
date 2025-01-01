@@ -19,162 +19,164 @@
   </script>
   <style>
     /* General Reset for Consistent Mobile Rendering */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-      flex-direction: column;
-    }
-    .container {
-      text-align: center;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      width: 90%;
-      margin-top: 60px;
-    }
-    .logo {
-      margin-bottom: 20px;
-    }
-    .logo img {
-      max-width: 100%;
-      height: auto;
-      width: 150px;
-      margin: 0 auto;
-    }
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-    }
-    .about-me {
-      margin-bottom: 60px; /* 60px spacing between sections */
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .about-me img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    .about-me h2 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-    .about-me p {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.5;
-      text-align: center;
-    }
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      margin-top: 20px;
-      margin-bottom: 60px; /* 60px spacing between sections */
-    }
-    .links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-decoration: none;
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: #ffffff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      text-align: center;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-    .links a img {
-      width: 20px;
-      height: 20px;
-      object-fit: cover;
-    }
-    .links a:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
-    }
-    .projects {
-      margin-bottom: 60px; /* 60px spacing between sections */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    /* Styling for the GitHub Projects Section */
-    .projects img {
-      width: 80px; /* Slightly smaller than the profile image */
-      height: 80px;
-      object-fit: cover;
-      margin-bottom: 10px;
-    }
-    .projects h2 {
-      color: #333;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-    .projects ul {
-      list-style: none;
-      padding: 0;
-    }
-    .projects ul li {
-      margin-bottom: 40px; /* Increased spacing between links */
-    }
-    .projects ul li a {
-      text-decoration: none;
-      color: #007BFF;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-    .projects ul li a:hover {
-      color: #0056b3;
-    }
-    .projects ul li p {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 5px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    /* Dropdown Menu Styles */
-    .dropdown {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      z-index: 10;
-    }
-    .dropdown div {
-      width: 30px;
-      height: 3px;
-      background-color: #333;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333333; /* Dark gray background */
+    color: #ffffff; /* Light text color for contrast */
+    flex-direction: column;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    color: #333333;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    margin-top: 60px;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    margin: 0 auto;
+  }
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  .about-me {
+    margin-bottom: 60px; /* 60px spacing between sections */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .about-me h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .about-me p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 60px; /* 60px spacing between sections */
+  }
+  .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .links a img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  .links a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  .projects {
+    margin-bottom: 60px; /* 60px spacing between sections */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* Styling for the GitHub Projects Section */
+  .projects img {
+    width: 80px; /* Slightly smaller than the profile image */
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .projects h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  .projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  .projects ul li {
+    margin-bottom: 40px; /* Increased spacing between links */
+  }
+  .projects ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+  }
+  .projects ul li a:hover {
+    color: #0056b3;
+  }
+  .projects ul li p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  /* Dropdown Menu Styles */
+  .dropdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .dropdown div {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
   .menu {
     display: none;
     position: fixed;
@@ -199,41 +201,40 @@
   }
     .dropdown.active div:nth-child(1) {
       transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    .dropdown.active div:nth-child(2) {
-      opacity: 0;
-    }
-    .dropdown.active div:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
-    .dropdown.active + .menu {
-      display: block;
-    }
-
-    /* Responsive Design for Smaller Screens */
-    @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-    }
-    h1 {
-      font-size: 1.5rem;
-    }
-    .links a {
-      font-size: 0.9rem;
-      padding: 8px 15px;
-    }
-    .projects h2 {
-      font-size: 1.3rem;
-    }
-    }
-    code {
-      background-color: #333; /* Dark grey background */
-      color: #fff;            /* White text color for contrast */
-      padding: 4px 8px;       /* Some padding to make it look like code */
-      border-radius: 4px;     /* Rounded corners for a cleaner look */
-      font-family: 'Courier New', monospace; /* Monospace font to resemble code */
-      font-size: 1rem;        /* Slightly larger font size for readability */
-    }
+  }
+  .dropdown.active div:nth-child(2) {
+    opacity: 0;
+  }
+  .dropdown.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .dropdown.active + .menu {
+    display: block;
+  }
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .links a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+  .projects h2 {
+    font-size: 1.3rem;
+  }
+  }
+  code {
+    background-color: #333; /* Dark grey background */
+    color: #fff;            /* White text color for contrast */
+    padding: 4px 8px;       /* Some padding to make it look like code */
+    border-radius: 4px;     /* Rounded corners for a cleaner look */
+    font-family: 'Courier New', monospace; /* Monospace font to resemble code */
+    font-size: 1rem;        /* Slightly larger font size for readability */
+  }
   </style>
 </head>
 <body>
