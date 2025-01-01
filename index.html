@@ -4,9 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A simple and clean links page to access your favorite websites and GitHub projects.">
-  <meta name="author" content="[OK-Penalty-218]">
+  <meta name="author" content="[Your Name]">
   <title>OK-Penalty-218</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script>
+        // Check if the user has completed the CAPTCHA
+        window.onload = function() {
+            // Check if the 'captchaCompleted' flag exists in sessionStorage
+            if (!sessionStorage.getItem('captchaCompleted')) {
+                // Redirect to the CAPTCHA page if not completed
+                window.location.href = '/index.html';  // Change this URL to match your CAPTCHA page
+            }
+        }
+  </script>
   <style>
     /* General Reset for Consistent Mobile Rendering */
     * {
@@ -50,11 +60,11 @@
       font-size: 1.8rem;
     }
     .about-me {
-      margin-bottom: 30px;
+      margin-bottom: 60px; /* 60px spacing between sections */
       text-align: center;
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center content horizontally */
+      align-items: center;
     }
     .about-me img {
       width: 100px;
@@ -72,13 +82,14 @@
       font-size: 1rem;
       color: #555;
       line-height: 1.5;
-      text-align: center; /* Center paragraph text */
+      text-align: center;
     }
     .links {
       display: flex;
       flex-direction: column;
-      gap: 40px; /* Increased spacing between buttons */
+      gap: 40px;
       margin-top: 20px;
+      margin-bottom: 60px; /* 60px spacing between sections */
     }
     .links a {
       display: flex;
@@ -105,11 +116,11 @@
       transform: translateY(-2px);
     }
     .projects {
-      margin-top: 40px;
+      margin-bottom: 60px; /* 60px spacing between sections */
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center content horizontally */
-      text-align: center; /* Center text */
+      align-items: center;
+      text-align: center;
     }
     .projects h2 {
       color: #333;
@@ -213,61 +224,55 @@
 <body>
   <!-- Dropdown Menu -->
   <div class="dropdown" onclick="toggleMenu()">
-    <div>about-me</div>
-    <div>links-section</div>
-    <div>projects</div>
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 
   <div class="container" id="top">
     <div class="logo">
-      <img src="images/logo.png" alt="Logo">
+      <img src="images/ok-penalty-218.png" alt="Logo">
     </div>
-    <h1>Welcome to OK-Penalty-218</h1>
+    <h1>OK-Penalty-218</h1>
     
     <!-- About Me Section -->
     <div class="about-me" id="about-me">
-      <img src="images/profile.jpg" alt="Profile Picture">
+      <img src="images/ok-penalty-218.png" alt="Profile Picture">
       <h2>About Me</h2>
       <p>
-        Hi! I'm [Your Name], a passionate developer who loves creating web applications and exploring new technologies. 
+        Hi! I'm OK-Penalty-218, a passionate developer who loves creating web applications and exploring new technologies. 
         Check out my favorite links and GitHub projects below!
       </p>
     </div>
 
     <!-- Links Section -->
     <div class="links" id="links-section">
-      <h2>My Links</h2>
-      <a href="#links-section">
-        <img src="images/google.png" alt="Google"> Google
+      <a href="#https://reddit.com/OK-Penalty-218">
+        <img src="images/reddit.ico" alt="Reddit"> Reddit
       </a>
-      <a href="#github-projects">
-        <img src="images/github.png" alt="GitHub"> GitHub
-      </a>
-      <a href="#stackoverflow">
-        <img src="images/stackoverflow.png" alt="Stack Overflow"> Stack Overflow
-      </a>
-      <a href="#example">
-        <img src="images/example.png" alt="Example"> Example
+      <a href="https://github.com/OK-Penalty-218">
+        <img src="images/github.ico" alt="GitHub"> GitHub
       </a>
     </div>
 
     <!-- GitHub Projects Section -->
     <div class="projects" id="github-projects">
+      <img src="images/github-mark.png" alt="GitHub Mark">
       <h2>My GitHub Projects</h2>
       <ul>
         <li>
-          <a href="https://github.com/yourusername/project1" target="_blank">Project 1: Awesome Tool</a>
+          <a href="https://github.com/OK-Penalty-218/bakup" target="_blank">Project 1: Ubuntu/Debian Backup Tool</a>
           <p>A description of what this project does and why it's amazing.</p>
         </li>
         <li>
-          <a href="https://github.com/yourusername/project2" target="_blank">Project 2: Cool API</a>
+          <a href="https://github.com/OK-Penalty-218/tenmiro-keepsmile-ble" target="_blank">Project 2: Homebridge Plugin for Tenmiro LED Lights</a>
           <p>An API that simplifies data handling and provides cool features.</p>
         </li>
       </ul>
     </div>
 
     <footer>
-      Made with ♥ by [Chat GPT]
+      Made with ♥ by Chat GPT
     </footer>
   </div>
 
