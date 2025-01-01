@@ -162,7 +162,7 @@
     }
     /* Dropdown Menu Styles */
     .dropdown {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
       cursor: pointer;
@@ -236,9 +236,9 @@
     <div></div>
   </div>
   <div class="menu">
-    <a href="#about-me">About Me</a>
-    <a href="#links-section">Links</a>
-    <a href="#github-projects">GitHub Projects</a>
+    <a href="#about-me" onclick="closeMenu()">About Me</a>
+    <a href="#links-section" onclick="closeMenu()">Links</a>
+    <a href="#github-projects" onclick="closeMenu()">GitHub Projects</a>
   </div>
   <div class="container" id="top">
     <div class="logo">
@@ -288,10 +288,14 @@
   </div>
 
   <script>
-    // Function to toggle the dropdown menu
-    function toggleMenu() {
-      document.querySelector('.dropdown').classList.toggle('active');
-    }
+  // Function to toggle the dropdown menu
+  function toggleMenu() {
+    document.querySelector('.dropdown').classList.toggle('active');
+  }
+  // Function to close the dropdown menu when a link is clicked
+  function closeMenu() {
+    document.querySelector('.dropdown').classList.remove('active');
+  }
   </script>
 </body>
 </html>
